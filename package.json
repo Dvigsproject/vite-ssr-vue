@@ -4,19 +4,25 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "cross-env NODE_ENV=production node server",
+    "preview": "npm run build && npm run serve"    
   },
   "dependencies": {
     "@types/node": "^16.4.3",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
     "@vuemod/prefetch": "^1.0.3",
+    "@vue/server-renderer": "^3.0.11",
+    "cross-env": "^7.0.3",
+    "vite-plugin-eslint": "^1.1.0",
+    "eslint": "^7.24.0",    
     "sass": "^1.36.0",
     "sass-loader": "^12.1.0",
     "vite-ssr-vue": "^0.2.5",
     "vue": "^3.0.5",
     "vue-router": "4",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vuex-router-sync": "^6.0.0-rc.1"    
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",
