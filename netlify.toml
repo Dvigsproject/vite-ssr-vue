@@ -4,6 +4,7 @@
 
 [build]
   publish = "dist"
+  base = "client"
   command = "npx yarn build"
 
 [functions]
